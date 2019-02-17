@@ -24,7 +24,7 @@ Usage
 Credits
 -------
 
-This module was written as part of an assignment for (CS730A)[https://www.cse.iitk.ac.in/users/deba/cs730/]. Module's base was provided as part of the assignment.
+This module was written as part of an assignment for [CS730A](https://www.cse.iitk.ac.in/users/deba/cs730/). Module's base was provided as part of the assignment.
 
 
 References
