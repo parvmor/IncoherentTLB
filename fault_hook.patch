@@ -18,7 +18,7 @@
  		return;
  	}
 +   // Log the page fault for the given pid.
-+   if(unlikely(tsk->pid == page_fault_pid))
++   if (unlikely(tsk->pid == page_fault_pid))
 +       printk(KERN_INFO "Page fault occured pid [%d] address [%lx] error_code [%lx]\n", tsk->pid, address, error_code);
  
  	/* kprobes don't want to hook the spurious faults: */
@@ -26,7 +26,7 @@
  		return;
 +         
 +   if (unlikely(error_code & X86_PF_RSVD)) {
-+       if(!rsvd_fault_hook || rsvd_fault_hook(mm, regs, error_code, address))
++       if (!rsvd_fault_hook || rsvd_fault_hook(mm, regs, error_code, address))
 +           pgtable_bad(regs, error_code, address);
 +       return;
 +   }
